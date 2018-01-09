@@ -1,0 +1,23 @@
+<div class="col-md-10 col-md-offset-1"> 
+  <div class="table-responsive"> 
+    <table class="table"> 
+      <thead> 
+        <tr> 
+          <td>Imagen</td>
+          <td>Titulo</td>
+          <td>Accion</td>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr *ngFor="let image of images | async"> 
+          <td> <img src="{{image.imageLink}}" width="250"></td>
+          <td> {{image.title}}</td>
+          <td> 
+            <a [routerLink]="['/images/edit']" class="btn btn-info"> Editar</a>
+            <a [routerLink]="['/images/delete']" class="btn btn-danger"> borrar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

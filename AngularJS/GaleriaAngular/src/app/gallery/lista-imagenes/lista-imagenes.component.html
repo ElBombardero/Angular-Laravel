@@ -1,0 +1,6 @@
+<app-detalle-imagen [selectedImage]="selectedImagen"></app-detalle-imagen>
+<div class="container">
+  <div class="row">
+    <app-imagen *ngFor="let imagen of images | async" [imagenInyectada]='imagen' (click)="onselect(imagen)"></app-imagen>
+  </div>
+</div>
